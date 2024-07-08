@@ -9,7 +9,7 @@
 \begin{document}
 \title{
     The hard way \\
-    \large Learning programming via compiler developement
+    \large A beginners guide to programming
 }
 \author{Lilly H. St Claire}
 \maketitle
@@ -88,14 +88,15 @@ value, and {\tt < } to subtract one from it.
 And finally we can repeat a series of actions by starting
 a "{\tt loop }" These loops begin with {\tt [ } and end with
 {\tt ] }. The program when running into the end of a loop
-and if the pointed to cell is zero, then it will go back to the
-start of the loop and do the actions from it to the end statement
-again.
+and if the pointed to cell is zero, then it will go back
+to the start of the loop and do the actions from it to the
+end statement again.
 
-Any character that does not control the current cell, pointer,
-or program is ignored by the compiler.
+Any character that does not control the current cell,
+pointer, or program is ignored by the compiler.
 
-We will test our compiler with the following brainfuck program.
+We will test our compiler with the following brainfuck
+program.
 
 \begin{verbatim}
 [
@@ -106,5 +107,33 @@ note: 10 is the ASCII value for a new line (or enter key).
 \end{verbatim}
 
 \section{To begin programming}
+
+Before we can build our first compiler a few fundamentals
+must be understood. We will be programming in Ocaml, but
+I implore you to adapt these programs to other languages.
+
+In Ocaml a program consists of functions, and function calls.
+For example:
+
+\begin{verbatim}
+let square x = x * x
+\end{verbatim}
+
+takes a number x and calculates x * x. We can call a function
+in ocaml by simply typing it's name, and then the "arguments"
+follow. See the following:
+
+\begin{verbatim}
+    square 10 (* evaluates to 100 *)
+\end{verbatim}
+
+(note that everything enclosed by {\tt (**) } is a comment
+and ignored by the Ocaml compiler).
+
+as before seen we can also apply operations to a value, these
+are things like addition ({\tt a + b}), subtraction ({\tt a - b }),
+multiplication ({\tt a * b}), and division ({\tt a / b}), which
+are all rather self explanatory. Other more obscure operations
+will be talked on when they come up.
 
 \end{document}
